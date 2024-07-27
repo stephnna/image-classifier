@@ -1,0 +1,56 @@
+Questions regarding Uploaded Image Classification:
+
+1. Did the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed? If not, report the differences in the classifications.
+
+Answer:
+    ResNet: Classified Dog_01.jpg (Siberian_husky_02.jpg.jpg) as "eskimo dog, husky".
+
+    VGG: Classified Dog_01.jpg (Siberian_husky_02.jpg.jpg) as "eskimo dog, husky".
+
+    AlexNet: Classified Dog_01.jpg (Siberian_husky_02.jpg.jpg) as "malamute, malemute, alaskan malamute".
+
+    The classifications for Dog_01.jpg are not the same across all three models. AlexNet classified it differently compared to ResNet and VGG. 
+
+
+2. Did each of the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg? If not, report the differences in the classifications.
+
+Answer: 
+    ResNet:
+        Dog_01.jpg (Siberian_husky_02.jpg.jpg): "eskimo dog, husky".
+        Dog_02.jpg (Siberian_husky_01.jpg.jpg): "eskimo dog, husky".
+    VGG:
+        Dog_01.jpg (Siberian_husky_02.jpg.jpg): "eskimo dog, husky".
+        Dog_02.jpg (Siberian_husky_01.jpg.jpg): "eskimo dog, husky".
+    AlexNet:
+        Dog_01.jpg (Siberian_husky_02.jpg.jpg): "malamute, malemute, alaskan malamute".
+        Dog_02.jpg (Siberian_husky_01.jpg.jpg): "eskimo dog, husky".
+
+    ResNet and VGG classified both Dog_01.jpg and Dog_02.jpg as the same breed ("eskimo dog, husky"). However, AlexNet classified them differently.
+
+
+3. Did the three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg to not be dogs? If not, report the misclassifications.
+
+Answer:
+    Animal_Name_01.jpg (Grizzly_bear_01.jpg.jpg):
+        ResNet: Classified as "brown bear, bruin, ursus arctos".
+        VGG: Classified as "brown bear, bruin, ursus arctos".
+        AlexNet: Classified as "brown bear, bruin, ursus arctos".
+
+    Object_Name_01.jpg (Table_lamp_01.jpg.jpg):
+        ResNet: Classified as "table lamp".
+        VGG: Classified as "table lamp".
+        AlexNet: Classified as "table lamp".
+
+    All three model architectures correctly classified Animal_Name_01.jpg and Object_Name_01.jpg as not being dogs. 
+
+
+4. Based upon your answers for questions 1. - 3. above, select the model architecture that you feel did the best at classifying the four uploaded images. Describe why you selected that model architecture as the best on uploaded image classification.
+
+Answer:
+    VGG and ResNet  architectures did equally well in all aspect given questions 1. - 3.
+
+Reason:
+
+    While VGG had the same performance as ResNet in terms of correct and incorrect classifications, AlexNet misclassified Dog_01.jpg and Dog_02.jpg as different breeds, indicating less reliability.
+    
+    Nevertheless, given that the VGG model ran in 0:59:46, which is slightly less than the ResNet runtime of 0:59:51, I feel that the VGG architecture is the best model.

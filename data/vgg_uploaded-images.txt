@@ -1,0 +1,76 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:      Siberian_husky_02.jpg.jpg  label:             siberian husky
+ 2 key:          Table_lamp_01.jpg.jpg  label:                 table lamp
+ 3 key:        Grizzly_bear_01.jpg.jpg  label:               grizzly bear
+ 4 key:      Siberian_husky_01.jpg.jpg  label:             siberian husky
+
+     MATCH:
+
+         Table_lamp_01.jpg.jpg: 
+Real:                 table lamp   Classifier:                     table lamp
+
+ NOT A MATCH:
+
+     Siberian_husky_02.jpg.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+       Grizzly_bear_01.jpg.jpg: 
+Real:               grizzly bear   Classifier: brown bear, bruin, ursus arctos
+
+     Siberian_husky_01.jpg.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+         Table_lamp_01.jpg.jpg: 
+Real:                 table lamp   Classifier:                     table lamp  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+     Siberian_husky_02.jpg.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+       Grizzly_bear_01.jpg.jpg: 
+Real:               grizzly bear   Classifier: brown bear, bruin, ursus arctos  
+PetLabelDog: 0  ClassLabelDog: 0
+
+     Siberian_husky_01.jpg.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pct_match           : 25.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 0.00
+pct_correct_notdogs : 100.00
+
+INCORRECT Dog Breed Assignment:
+Real:             siberian husky   Classifier:              eskimo dog, husky
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+** Total Elapsed Runtime: 0:59:46
